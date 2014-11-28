@@ -1,0 +1,89 @@
+h4 {
+  margin-top: 25px;
+}
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.prof_title {
+	margin-top: 50px;
+}
+
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+#nav {
+    line-height:30px;
+    background-color:#ffffff;
+    height:1000px;
+    width:300px;
+    float:left;
+	margin-left: 50px;
+    padding:5px; 
+}
+#section {
+    width:350px;
+    float:left;
+	margin-left: 20px;
+    padding:10px; 
+
+}
+
+.box {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:1000px;
+    width:500px;
+    float:left;
+	margin-left: 50px;
+    padding:5px; 
+}
+
+#box2 {
+	height:250px;
+	width:250px;
+	margin-top:20px;
+	margin-left:20px;
+	background-color: #eeeeee;
+}
+#prof_pic {
+	height:250px;
+	width:250px;
+	margin-left: 20px;
+	background-color: #eeeeee;
+	
+}
+
