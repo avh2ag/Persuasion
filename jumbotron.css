@@ -1,0 +1,26 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+	  background-image: url("The-Blue.jpg");
+      background-repeat: no-repeat;
+      background-size: 1285px 330px;
+	  
+}
+
+#back {
+	color: black;
+	font-family: 'Roboto Slab', serif;
+}
+
+#back2 {
+	background-color: rgb(64,64,64);
+	font-family: 'Roboto Slab', serif;
+	color: rgb(255,0,100);
+}
+
+.test {
+	font-family: serif;
+}
