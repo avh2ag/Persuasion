@@ -29,26 +29,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
 
   <body>
-    <?php
-	
-    // Create connection
-    $con=mysqli_connect("stardock.cs.virginia.edu","cs4720sms2av","sarah27","cs4720sms2av");
-
-    // Check connection
-    if (mysqli_connect_errno()) {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-
-  $cat = $_GET['category'];
-  
-  $test = mysqli_query($con,"SELECT full_name FROM mdst WHERE code='Anne_Elliot");
-  echo $test;
-
-    ?>
 	  
+	  <body>
 	    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="back2">
 	      <div class="container">
 	        <div class="navbar-header">
@@ -73,21 +57,22 @@
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 	      </div>
-	    
-		</div>
+	    </div>
 		
-		
-	    <div id="nav" img src="" alt="profile picture" id="prof_pic">
-		
-	
-		<div id="box2"></div>
-		
-		
+	    <div id="nav"> 
+
+	    <?php
+	    // Create connection
+	    $topic = "http://studio1.shanti.virginia.edu/MDST3703F14/data/view/cmm4kd"; 
+	    $cat = $_GET['category'];
+		$req1 = include("$topic/about/code/$cat/full_name");
+		echo "$req1";
+	 	?>
+		<img src="<?php include("$topic/about/text/code/$cat/img_url"); ?>" alt="profile picture" id="prof_pic">
+				
 	</div>
 		
-		
-		
-		<h3 id="section"></h3>
+		<h3 id="section"><?php include("$topic/about/text/code/$cat/full_name"); ?></h3>
   
 		
   	
