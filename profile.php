@@ -33,10 +33,19 @@
 
   <body>
     <?php
+	
+    // Create connection
+    $con=mysqli_connect("stardock.cs.virginia.edu","cs4720sms2av","sarah27","cs4720sms2av");
 
-    $con="http://studio1.shanti.virginia.edu/MDST3703F14/data/view/cmmd4k/about/code/";
+    // Check connection
+    if (mysqli_connect_errno()) {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
 
-    $cat = $_GET['category'];
+  $cat = $_GET['category'];
+  
+  $test = mysqli_query($con,"SELECT full_name FROM mdst WHERE code='Anne_Elliot");
+  echo $test;
 
     ?>
 	  
@@ -78,7 +87,7 @@
 		
 		
 		
-		<h3 id=""></h3>
+		<h3 id="section"></h3>
   
 		
   	
