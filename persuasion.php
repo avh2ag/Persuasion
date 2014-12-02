@@ -73,6 +73,7 @@
     	
     </section>
 
+
     <section class="footer">
     	<div class="mdst">MDST 3703 Final Project</div>
     	<div class="pers">Persuabook &copy; 2014 </div>
