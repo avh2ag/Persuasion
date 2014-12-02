@@ -99,38 +99,7 @@
 							<button type="submit" class="btn btn-default">Go to profile</button>
 						</form>
 					</div>
-					<div class="col-md-6">
-						<h2>View Interactions</h2>
-		    			<form role="form" action="newsfeed.php" method="GET">
-							<div class="form-group">
-			  				  <label for="category">Character</label>
-			  				<select class="form-control" id="category" name="category">
-			      			  <option value="Anne_Elliot">Anne Elliot</option>
-			      			  <option value="Captain_Frederick_Wentworth">Capt. Fredrick Wentworth</option>
-			     		      <option value="Sir_Walter_Elliot">Sir Walter Elliot</option>
-							  <option value="Elizabeth_Elliot">Elizabeth Elliot</option>
-							  <option value="Mary_Elliot_Musgrove">Mary Elliot Musgrove </option>
-							  <option value="Charles_Musgrove">Charles Musgrove</option>
-							  <option value="Louisa_Musgrove">Louisa Musgrove</option>
-							  <option value="Henrietta_Musgrove">Henrietta Musgrove</option>
-							  <option value="Lady_Russell">Lady Russell</option>
-							  <option value="Admiral_Croft">Admiral Croft</option>
-							  <option value="Sophia_Croft">Sophia Croft</option>
-							  <option value="Captain_Harville">Captian Harville</option>
-							  <option value="William_Elliot">William Elliot</option>
-							  <option value="Mrs_Smith">Mrs. Smith </option>
-							  <option value="Lady_Dalyrmple">Lady Dalyrmple</option>
-							  <option value="Miss_Carteret">Miss Carteret</option>
-							  <option value="Captain_Benwick">Captain Benwick</option>
-							  <option value="Mrs_Penelope_Clay">Mrs. Penelope Clay</option>
-							  <option value="John_Shepard">John Shepard</option>
-							  <option value="Charles_Hayter">Charles Hayter</option> 
-							  
-			  		 	 	</select>
-		    				</div>
-							<button type="submit" class="btn btn-default">Go to profile</button>
-						</form>
-					</div>
+
       
       </div>
     </div>
