@@ -1,0 +1,129 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron {
+	  background-image: url("The-Blue.jpg");
+      background-repeat: no-repeat;
+      background-size: 1285px 330px;
+	  
+}
+.navbar-header {
+	margin-top: 5px;
+}
+.navbar-right {
+	margin-top: 12px;
+}
+#back {
+	background-color: #435282;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	min-height: 60px;
+}
+
+#back2 {
+	background-color: #435282;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+#back2 .navbar-right {
+	margin-top: 28px;
+}
+.test {
+	font-family: serif;
+}
+
+.persuabooklogo {
+	height: 85px;
+}
+.logosmall {
+	margin-top: 10px;
+	height: 30px;
+}
+.btn-link {
+	font-weight: 500;
+	font-size: 16px;
+	color: #fff;
+}
+.btn-link:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #343f63;
+	border-radius: 5px;
+}
+.charsearch {
+	margin-right: 10px;
+}
+
+.mainpage {
+	margin-top: 90px;
+	background-color: #ececec;
+	height: 500px;
+}
+
+.profilepage {
+	margin-top: 59px;
+	background-color: #ececec;
+	padding-top: 50px;
+	min-height: 700px;
+}
+
+.footer {
+	background-color: #f7f7f7;
+}
+
+.mdst {
+	text-align: center;
+	padding-top: 25px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+}
+.pers {
+	text-align: center;
+	font-size: 15px;
+	padding-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+.team {
+	text-align: center;
+	padding-top: 10px;
+	font-size: 13px;
+	padding-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+.prof_pic {
+	height:250px;
+	width:250px;
+	margin-left: 2em;
+	background-color: #eeeeee;
+	border-radius: 5px;	
+}
+
+.box {
+    background-color: #fff;
+    padding: 10px;
+    width: 550px;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+}
+
+.profilename {
+	width: 550px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	background-color: #fff;
+}
