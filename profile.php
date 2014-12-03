@@ -25,6 +25,8 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -82,27 +84,151 @@
 		    // Create connection
 		    $topic = "http://studio1.shanti.virginia.edu/MDST3703F14/data/view/cmm4kd"; 
 		    $cat = $_GET['category'];
-			$req1 = include("$topic/about/code/$cat/full_name");
-			echo "$req1";
 		 	?>
 			<img src="<?php include("$topic/about/text/code/$cat/img_url"); ?>" alt="profile picture" class="prof_pic">
+				
+				<div id="box2">
+					<div>Relationships:</div>
+				<?php
+				// Create connection
+				$con=mysqli_connect("dbm2.itc.virginia.edu","publicread","","MDST3703F14_cmm4kd");
+				// Check connection
+				if ($con->connect_error) {
+				    die("Connection failed: " . $con->connect_error);
+				}
+				
+				$sql = "SELECT * FROM relationships WHERE code='$cat'";
+				$result = $con->query($sql);
+				
+				if ($result->num_rows >= 0) {
+				    while($row = $result->fetch_assoc()) {
+						echo "" . $row["member_1"]. ": " . $row["relationship_1"]. "<br>";
+						echo "" . $row["member_2"]. ": " . $row["relationship_2"]. "<br>";
+						echo "" . $row["member_3"]. ": " . $row["relationship_3"]. "<br>";
+						echo "" . $row["member_4"]. ": " . $row["relationship_4"]. "<br>";
+						echo "" . $row["member_5"]. ": " . $row["relationship_5"]. "<br>";
+						echo "" . $row["member_6"]. ": " . $row["relationship_6"]. "<br>";
+						echo "" . $row["member_7"]. ": " . $row["relationship_7"]. "<br>";
+						echo "" . $row["member_8"]. ": " . $row["relationship_8"]. "<br>";
+						echo "" . $row["member_9"]. ": " . $row["relationship_9"]. "<br>";
+						echo "" . $row["member_10"]. ": " . $row["relationship_10"]. "<br>";
+						echo "" . $row["member_11"]. ": " . $row["relationship_11"]. "<br>";
+						echo "" . $row["member_12"]. ": " . $row["relationship_12"]. "<br>";
+						echo "" . $row["member_13"]. ": " . $row["relationship_13"]. "<br>";	
+					}				    
+				} else {
+				    echo "";
+				} 
+				$con->close();			
+				?>
+					
+				</div>
+		
+			</div>
 					 
 	</div>		
 	  	
 	<div class="col-md-5">	
 		<div class="profilename"><?php include("$topic/about/text/code/$cat/full_name"); ?></div>
 	
+		
 	    <div class="box">
-			<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a href="#timeline">Timeline</a></li>
-			  <li role="presentation"><a href="#">About Me</a></li>
-			  <li role="presentation"><a href="#">Photos</a></li>
+			<ul id="myTab" class="nav nav-tabs" role="tablist">
+			  <li role="nav active"><a href="#timeline" data-toggle="tab">Timeline</a></li>
+			  <li role="nav"><a href="#about" data-toggle="tab">About Me</a></li>
+			  <li role="nav"><a href="#photos" data-toggle="tab">Photos</a></li>
 			</ul>
-
-			<div id="timeline">
-				hi
-			</div>
+	  
+	  
+	      <div class="tab-content">
+	        <div class="tab-pane fade in active" id="timeline">
+					<?php
+					/*
+				// Create connection
+				$con=mysqli_connect("dbm2.itc.virginia.edu","publicread","","MDST3703F14_cmm4kd");
+				// Check connection
+				if ($con->connect_error) {
+				    die("Connection failed: " . $con->connect_error);
+				}
+				
+				$sql = "SELECT full_name FROM about WHERE code='$cat'";
+				$result = $con->query($sql);
+				if ($result->num_rows >= 0) {
+				    while($row = $result->fetch_assoc()) {
+				        $var= $row["full_name"];
+				    }
+				} else {
+					echo "";
+				}
 			
+				$sql2 = "SELECT * FROM interactions WHERE to='$var'";
+				$result2 = $con->query($sql2);
+			
+				if ($result2->num_rows >= 0) {
+					while($row2 = $result2->fetch_assoc()) {
+						echo "" . $row2["from"]. "->" . $row2[to] . "<br>";
+						echo "" . $row2["content"]. "<br>";
+			    	}
+				} else {
+				echo "";
+				}
+
+				$con->close();	
+				*/
+				?>
+	        </div>
+			
+				<div class="tab-pane fade" id="about">
+					<div> About me: </div>
+					<div><?php include("$topic/about/text/code/$cat/about_me"); ?></div>
+					<div> City: </div>
+					<div><?php include("$topic/about/text/code/$cat/city"); ?></div>
+					<div> Occupation: </div>
+					<div><?php include("$topic/about/text/code/$cat/occupation"); ?></div>
+					<div> Birthday: </div>
+					<div><?php include("$topic/about/text/code/$cat/birthday"); ?></div>
+					<div> Relationship Status: </div>
+					<div><?php include("$topic/about/text/code/$cat/relationship_status"); ?></div>
+				</div>
+				<div class="tab-pane fade" id="photos">
+				<?php
+				// Create connection
+				$con=mysqli_connect("dbm2.itc.virginia.edu","publicread","","MDST3703F14_cmm4kd");
+				// Check connection
+				if ($con->connect_error) {
+				    die("Connection failed: " . $con->connect_error);
+				}
+				$cat = $_GET['category'];
+				
+				$sql = "SELECT full_name FROM about WHERE code='$cat'";
+				$result = $con->query($sql);
+				
+				if ($result->num_rows >= 0) {
+				    while($row = $result->fetch_assoc()) {
+				        $var= $row["full_name"];
+				    }
+				} else {
+				    echo "";
+				} 
+								
+				$sql2 = "SELECT image FROM photos WHERE character_1='$var' OR character_2='$var' OR 				character_3='$var' OR character_4='$var' OR character_5='$var' OR character_6='$var' OR 				character_7='$var'";
+				$result2 = $con->query($sql2);
+				
+				if ($result2->num_rows > 0) {
+				    // output data of each row
+				    while($row2 = $result2->fetch_assoc()) {
+				        //echo "image: " . $row2["image"]. "<br>";
+						echo '<img src="'. $row2["image"]. '" alt="pic" class="img"/>';
+				    }
+				} else {
+				    echo "";
+				}
+
+				$con->close();			
+				?>	
+				</div>
+	        </div>
+		  </div>
 	    </div>
 	</div>
 
