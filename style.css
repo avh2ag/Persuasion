@@ -127,3 +127,11 @@ html, body {
 	padding-left: 10px;
 	background-color: #fff;
 }
+
+.img {
+    margin: 5px;
+    padding: 5px;
+    height: 200px;
+    width: 250px;
+    text-align: center;
+}
