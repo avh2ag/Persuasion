@@ -1,23 +1,26 @@
+<html>
+<head></head>
+<body>
+<?php
+//Must Create Connection/Iterate through the category
+  $con=mysqli_connect("dbm2.itc.virginia.edu","publicread","","MDST3703F14_cmm4kd");
 
-<?
-// set body tag
-$body='<body id="welcome">';
-$gamti="true"; 
-//test connection
-   $con=mysqli_connect("stardock.cs.virginia.edu","cs4720sms2av","sarah27","cs4720sms2av");
+  // Check connection
+  if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+ 
 
-    // Check connection
-    if (mysqli_connect_errno()) {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
+    $topic = "http://studio1.shanti.virginia.edu/MDST3703F14/data/view/cmm4kd"; 
+	    $cat = $_GET['category'];
+//		$req1 = include("$topic/interactions/text/type");
+		echo $req1;
+	$test_query = "SELECT * from interactions";
+	$execute = mysql_fetch_array(mysql_query($test_query)); 
+	echo $execute
 
-  $cat = $_GET['category'];
-  
-  $test = mysqli_query($con,"SELECT full_name FROM mdst WHERE code='Anne_Elliot");
-  echo $test;
 
-	// grab the active tournament from the constants table
-	
 
 ?>
-
+</body>
+</html>
