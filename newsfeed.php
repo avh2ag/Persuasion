@@ -7,6 +7,10 @@
     min-height: 50px;
     width: 400px; 
     display: block;
+    margin-left: 35%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 3px;
    }
    .status-content{
     margin-left: 15px;
@@ -14,10 +18,13 @@
     margin-right: 15px;
     margin-bottom: 15px;
     border: 1px solid;
+    border-radius: 5px;
     padding: 4px;
    }
    .footer{
       background: #f9f9f9;
+      border-bottom: 1px solid;
+      border-radius: 5px;
       min-height: 20px;
       padding-left: 5px;
       padding-left: 5px;

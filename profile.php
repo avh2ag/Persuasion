@@ -145,31 +145,21 @@
 	  
 	      <div class="tab-content">
 	        <div class="tab-pane fade in active" id="timeline">
-					<?php
-					/*
+					
+		<?php
 				// Create connection
 				$con=mysqli_connect("dbm2.itc.virginia.edu","publicread","","MDST3703F14_cmm4kd");
 				// Check connection
 				if ($con->connect_error) {
 				    die("Connection failed: " . $con->connect_error);
 				}
-				
-				$sql = "SELECT full_name FROM about WHERE code='$cat'";
-				$result = $con->query($sql);
-				if ($result->num_rows >= 0) {
-				    while($row = $result->fetch_assoc()) {
-				        $var= $row["full_name"];
-				    }
-				} else {
-					echo "";
-				}
 			
-				$sql2 = "SELECT * FROM interactions WHERE to='$var'";
+				$sql2 = "SELECT * FROM interactions WHERE code='$cat'";
 				$result2 = $con->query($sql2);
 			
 				if ($result2->num_rows >= 0) {
 					while($row2 = $result2->fetch_assoc()) {
-						echo "" . $row2["from"]. "->" . $row2[to] . "<br>";
+						echo "" . $row2["from"]. "->" . $row2["to"] . "<br>";
 						echo "" . $row2["content"]. "<br>";
 			    	}
 				} else {
@@ -177,7 +167,6 @@
 				}
 
 				$con->close();	
-				*/
 				?>
 	        </div>
 			
