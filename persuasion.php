@@ -70,7 +70,9 @@
     	</div>
 
     <section class="mainpage">
-    	
+    	<?php
+        include 'newsfeed.php';
+      ?>
     </section>
 
 
