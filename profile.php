@@ -87,8 +87,11 @@
 		 	?>
 			<img src="<?php include("$topic/about/text/code/$cat/img_url"); ?>" alt="profile picture" class="prof_pic">
 				
-				<div id="box2">
-					<div>Relationships:</div>
+				<div class="box2">
+
+				<div class="relationships">Relationships</div>
+
+				<div class="people">
 				<?php
 				// Create connection
 				$con=mysqli_connect("dbm2.itc.virginia.edu","publicread","","MDST3703F14_cmm4kd");
@@ -102,26 +105,26 @@
 				
 				if ($result->num_rows >= 0) {
 				    while($row = $result->fetch_assoc()) {
-						echo "" . $row["member_1"]. ": " . $row["relationship_1"]. "<br>";
-						echo "" . $row["member_2"]. ": " . $row["relationship_2"]. "<br>";
-						echo "" . $row["member_3"]. ": " . $row["relationship_3"]. "<br>";
-						echo "" . $row["member_4"]. ": " . $row["relationship_4"]. "<br>";
-						echo "" . $row["member_5"]. ": " . $row["relationship_5"]. "<br>";
-						echo "" . $row["member_6"]. ": " . $row["relationship_6"]. "<br>";
-						echo "" . $row["member_7"]. ": " . $row["relationship_7"]. "<br>";
-						echo "" . $row["member_8"]. ": " . $row["relationship_8"]. "<br>";
-						echo "" . $row["member_9"]. ": " . $row["relationship_9"]. "<br>";
-						echo "" . $row["member_10"]. ": " . $row["relationship_10"]. "<br>";
-						echo "" . $row["member_11"]. ": " . $row["relationship_11"]. "<br>";
-						echo "" . $row["member_12"]. ": " . $row["relationship_12"]. "<br>";
-						echo "" . $row["member_13"]. ": " . $row["relationship_13"]. "<br>";	
+						echo "<mem>" . $row["member_1"]. "</mem> <br> <cap>" . $row["relationship_1"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_2"]. "</mem> <br> <cap>" . $row["relationship_2"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_3"]. "</mem> <br> <cap>" . $row["relationship_3"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_4"]. "</mem> <br> <cap>" . $row["relationship_4"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_5"]. "</mem> <br> <cap>" . $row["relationship_5"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_6"]. "</mem> <br> <cap>" . $row["relationship_6"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_7"]. "</mem> <br> <cap>" . $row["relationship_7"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_8"]. "</mem> <br> <cap>" . $row["relationship_8"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_9"]. "</mem> <br> <cap>" . $row["relationship_9"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_10"]. "</mem> <br> <cap>" . $row["relationship_10"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_11"]. "</mem> <br> <cap>" . $row["relationship_11"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_12"]. "</mem> <br> <cap>" . $row["relationship_12"]. "</cap>" . "<br>";
+						echo "<mem>" . $row["member_13"]. "</mem> <br> <cap>" . $row["relationship_13"]. "</cap>" . "<br>";	
 					}				    
 				} else {
 				    echo "";
 				} 
 				$con->close();			
 				?>
-					
+				</div>
 				</div>
 		
 			</div>
@@ -179,16 +182,16 @@
 	        </div>
 			
 				<div class="tab-pane fade" id="about">
-					<div> About me: </div>
-					<div><?php include("$topic/about/text/code/$cat/about_me"); ?></div>
-					<div> City: </div>
-					<div><?php include("$topic/about/text/code/$cat/city"); ?></div>
-					<div> Occupation: </div>
-					<div><?php include("$topic/about/text/code/$cat/occupation"); ?></div>
-					<div> Birthday: </div>
-					<div><?php include("$topic/about/text/code/$cat/birthday"); ?></div>
-					<div> Relationship Status: </div>
-					<div><?php include("$topic/about/text/code/$cat/relationship_status"); ?></div>
+					<div class="aboutme"> About me </div>
+					<div class="descr"><?php include("$topic/about/text/code/$cat/about_me"); ?></div>
+					<div class="aboutme"> Location</div>
+					<div class="descr"> <?php include("$topic/about/text/code/$cat/city"); ?></div>
+					<div class="aboutme"> Occupation </div>
+					<div class="descr"><?php include("$topic/about/text/code/$cat/occupation"); ?></div>
+					<div class="aboutme"> Birthday </div>
+					<div class="descr"><?php include("$topic/about/text/code/$cat/birthday"); ?></div>
+					<div class="aboutme"> Relationship Status </div>
+					<div class="descr"><?php include("$topic/about/text/code/$cat/relationship_status"); ?></div>
 				</div>
 				<div class="tab-pane fade" id="photos">
 				<?php
