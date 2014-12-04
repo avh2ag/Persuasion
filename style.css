@@ -61,7 +61,8 @@ html, body {
 .mainpage {
 	margin-top: 90px;
 	background-color: #ececec;
-	height: 500px;
+	min-height: 500px;
+	overflow: hidden;
 }
 
 .profilepage {
