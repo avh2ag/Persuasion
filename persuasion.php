@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="fb blue.png">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -70,11 +70,13 @@
     	</div>
 
     <section class="mainpage">
-
+    <div class="col-md-5 col-md-offset-3">
+    <h3> Newsfeed </h3>
       <br>
     	<?php
         include 'newsfeed.php';
       ?>
+    <div>
     </section>
 
 

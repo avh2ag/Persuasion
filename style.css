@@ -63,8 +63,22 @@ html, body {
 	background-color: #ececec;
 	min-height: 500px;
 	overflow: hidden;
+	padding-bottom: 40px;
 }
-
+.mainpage h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 27px;
+	padding: 20px;
+	border: 1px solid #435282;
+	border-radius: 5px;
+	background-color: #fff;
+	margin-top: 40px;
+	color: #435282;
+}
+.mainpage h4 {
+	margin-top: 15px;
+	margin-bottom: -5px;
+}
 .profilepage {
 	margin-top: 59px;
 	background-color: #ececec;
@@ -75,7 +89,7 @@ html, body {
 }
 
 .footer {
-	background-color: #f7f7f7;
+	background-color: #fff;
 }
 
 .mdst {
@@ -183,4 +197,20 @@ cap {
 	margin-left: 10px;
 	margin-bottom: 15px;
 	font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    padding-top: 5px;
+}
+.prof {
+	padding-top: 10px;
+	border-bottom: 1px solid #dfdfdf;
+	padding-bottom: 15px;
+	margin-left: 5px;
+
+}
+
+.profilepage h4 {
+	color: #435282;
+	margin-bottom: -10px;
 }
