@@ -36,7 +36,48 @@
   </head>
 
   <body>
-	  
+	  <style>
+   .status{
+    border: 1px solid black;
+    min-height: 50px;
+    width: 400px; 
+    display: block;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+   }
+   .status-content{
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+   }
+   .footer{
+      background: #f9f9f9;
+      border-bottom: 1px solid;
+      border-radius: 5px;
+      min-height: 20px;
+      padding-left: 5px;
+      padding-left: 5px;
+   }
+   .people{
+      display: inline-block; /*fix this then switch over */
+   }
+   .person-from{
+    margin-left: 10px;
+    display: inline-block;
+   }
+   .person-to{
+    display: inline-block;
+   }
+   .arrow{
+    font-weight: bold;
+    font-size: large;
+   }
+  </style>
     
     <div class="navbar navbar-fixed-top" role="navigation" id="back">
       <div class="container">
@@ -156,11 +197,46 @@
 			
 				$sql2 = "SELECT * FROM interactions WHERE code='$cat'";
 				$result2 = $con->query($sql2);
-			
+
+				  $status1 = '<div class="status">';
+				  $people = '<div class="people">';
+				  $open_person_from = '<h3 class="person-from">'; //add "from"
+				  $close_h3 = '</h3>';
+				  $arrow = '<span class="arrow"> > </span>';
+				  $open_person_to = '<h3 class="person-to">';
+				  $open_status_content = '<div class="status-content">';
+				  $open_footer = '<div class="footer">';
+				  $close_div = '</div>';
+
 				if ($result2->num_rows >= 0) {
 					while($row2 = $result2->fetch_assoc()) {
-						echo "<div class='prof'><h4>" . $row2["sent_from"]. " &nbsp; <i class='fa fa-caret-right'></i> &nbsp; " . $row2["sent_to"] . "</h4><br>";
-						echo "<div class='content'>" . $row2["content"]. "</div></div>";
+						      $content = $row2["content"];
+						      $to = $row2["sent_to"];
+						      $from = $row2["sent_from"];
+						      $chapter = $row2["chapter"];
+						      $order = $row2["order"];
+						      $type = $row2["type"];
+						      //create div
+						      echo $status1;
+						      echo $people;
+						      echo $open_person_from;
+						      echo $from;
+						      echo $close_h3;
+						      if ($type =="post"){
+						        echo $arrow;
+						        echo $open_person_to;
+						        echo $to;
+						        echo $close_h3;
+						      }
+						      echo $close_div; // end people
+						      echo $open_status_content;
+						      echo $content;
+						      echo $close_div; //end status content
+						      echo $open_footer;
+						      echo "Write a comment...";
+						      echo $close_div; //end footer
+
+						      echo $close_div; // end status
 			    	}
 				} else {
 				echo "";

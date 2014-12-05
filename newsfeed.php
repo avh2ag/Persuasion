@@ -3,10 +3,11 @@
 <body>
   <style>
    .status{
-    border: 1px solid #dfdfdf;
-    background-color: #fff;
+    border: 1px solid black;
     min-height: 50px;
+    width: 400px; 
     display: block;
+    margin-left: 35%;
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 3px;
@@ -16,12 +17,13 @@
     margin-top: 10px;
     margin-right: 15px;
     margin-bottom: 15px;
-    border-top: 1px solid #dfdfdf;
-    padding-top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
    }
    .footer{
       background: #f9f9f9;
-      border-bottom: 1px solid #dfdfdf;
+      border-bottom: 1px solid;
       border-radius: 5px;
       min-height: 20px;
       padding-left: 5px;
@@ -51,10 +53,10 @@
   //distinguish post from status just by adding person from
   $status1 = '<div class="status">';
   $people = '<div class="people">';
-  $open_person_from = '<h4 class="person-from">'; //add "from"
-  $close_h3 = '</h4>';
-  $arrow = '<span class="arrow"> &nbsp; <i class="fa fa-caret-right"></i> &nbsp; </span>';
-  $open_person_to = '<h4 class="person-to">';
+  $open_person_from = '<h3 class="person-from">'; //add "from"
+  $close_h3 = '</h3>';
+  $arrow = '<span class="arrow"> > </span>';
+  $open_person_to = '<h3 class="person-to">';
   $open_status_content = '<div class="status-content">';
   $open_footer = '<div class="footer">';
   $close_div = '</div>';
@@ -73,7 +75,7 @@
       $to = $row["sent_to"];
       $from = $row["sent_from"];
       $chapter = $row["chapter"];
-      $order = $row["order_num"];
+      $order = $row["order"];
       $type = $row["type"];
       //create div
       echo $status1;
